@@ -1,9 +1,10 @@
 # touch-scroll-listboxes
-Subclassing Win32 controls to achieve touch-scrollable list boxes
+Subclassing Win32 controls in Clarion to achieve touch-scrollable list boxes 
+(similar to mobile touch scrolling). 
 
 This consists of a class which overrides the default handling for 
 Win32 listboxes and processes the appropriate gesture messages that are built 
-in on Windows 7+. 
+in on Windows 7+. Works on touch-enabled laptops, monitors and tablets. 
 
 Usage:
 1) In your core module, before the global map, do this:
@@ -11,10 +12,13 @@ Usage:
    INCLUDE('TouchScrollList.inc'),ONCE ! Touch-Scroll ListBox class
 
 2) For any window where you want to use this, in the main declarations 
-before the code, create an instance of the class. For example:
+before the code, create an instance of the class. 
 
-ThisTouchList       CLASS(TouchScrollList)
-                    END
+   For example:
+
+   ThisTouchList       CLASS(TouchScrollList)
+
+   END
 
 3) In your ThisWindow.Init method, after the window is opened, do this 
 (substituting the name of your listbox control):
@@ -51,4 +55,5 @@ to shepherd me through learning some of the things I needed to accomplish this.
 Thanks gentlemen! If you're ever in Toronto I owe you some drinks.
 
 Cheers!
+
 Tom
